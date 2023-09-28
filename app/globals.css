@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+/* Animate blink */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Cursor */
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+main {
+  background: linear-gradient(-45deg, #ef4136, #fb6f40, #fca121, #f26522);
+  background: linear-gradient(-45deg, #2d388a, #00aeef, #00a99d, #f26522);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.outer {
+  background: #b4b4b4;
+  opacity: 0.9;   
+  padding: 10px;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.outer.dark {
+  background: #273138;
+}
+
+.outer.yosemite {
+  background: #f6f6f6;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f6f6f6 0%, #dadada 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #dadada));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f6f6f6 0%, #dadada 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f6f6f6 0%, #dadada 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f6f6f6 0%, #dadada 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f6f6f6 0%, #dadada 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#dadada', GradientType=0);
+  /* IE6-9 */
+  border: 1px solid #d8d8d8;
+  border-bottom: 1px solid #b4b4b4;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #f9f9f9;
+  border-radius: 50%;
+  margin: 0 4px 0 0;
+}
+
+.dot.red {
+  background: #ff6057;
+  border: 1px solid #e14640;
+}
+
+.dot.amber {
+  background: #ffbd2e;
+  border: 1px solid #dfa123;
+}
+
+.dot.green {
+  background: #27c93f;
+  border: 1px solid #1dad2b;
+}
+
+.osx-content-darker {
+  background: #3c4247;
+  border: 1px solid #1f2927;
+  border-radius: 0px 0px 7px 7px;
+  padding: 10px;
+  border-top: none;
+}
+
+.osx-content-blur {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0px 0px 7px 7px;
+  margin-top: -5px;
+  padding: 10px;
+}
+
+.outer-blur {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 7px;
+  padding: 10px;
+  color: #080808;
+}
+
+.background-blur {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image-wrapper img {
+  border-radius: 10px;
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.1);
+}
+
+.image-wrapper span {
+  font-weight: 200;
+  font-size: 14px;
+}
