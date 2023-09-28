@@ -21,6 +21,7 @@ body {
   background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  overflow-x: hidden;
 }
 
 /* Animate blink */
@@ -160,10 +161,10 @@ main {
 }
 
 .image-wrapper img {
-  border-radius: 10px;
+  border-radius: 20px;
   width: 200px;
   height: 150px;
-  object-fit: cover;
+  object-fit: contain;
   aspect-ratio: 1 / 1;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
