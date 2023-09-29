@@ -16,12 +16,43 @@
   }
 }
 
+@property --gradient-color-1 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #2d388a;
+}
+
+@property --gradient-color-2 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #00aeef;
+}
+
+@property --gradient-color-3 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #00a99d;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   overflow-x: hidden;
+  background: linear-gradient(-45deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  transition: --gradient-color-1 0.5s ease, --gradient-color-2 0.5s ease, --gradient-color-3 0.5s ease;
+}
+
+body.palestrantes-background-gradient {
+  --gradient-color-1: #f2709c;
+  --gradient-color-2: #ff9472;
+  --gradient-color-3: #ff9472;
+}
+
+body.patrocinadores-background-gradient {
+  --gradient-color-1: #FC354C;
+  --gradient-color-2: #0ABFBC;
+  --gradient-color-3: #0ABFBC;
 }
 
 /* Animate blink */
@@ -49,10 +80,6 @@ body {
 }
 
 main {
-  background: linear-gradient(-45deg, #ef4136, #fb6f40, #fca121, #f26522);
-  background: linear-gradient(-45deg, #2d388a, #00aeef, #00a99d, #f26522);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
@@ -158,6 +185,8 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 250px;
+  height: 150px;
 }
 
 .image-wrapper img {
@@ -173,7 +202,45 @@ main {
   transform: scale(1.1);
 }
 
-.image-wrapper span {
+.file-wrapper span {
   font-weight: 200;
   font-size: 14px;
+}
+
+.gallery-container {
+  max-width: 1000px;
+}
+
+main, section {
+  min-height: 100vh;
+}
+
+.section-description {
+  max-width: 500px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.item-header {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.item-header:hover{
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  main, section {
+    min-height: auto;
+  }
+  .section-description {
+    max-width: 100%;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
 }
