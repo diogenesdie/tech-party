@@ -44,9 +44,9 @@ body {
 }
 
 body.palestrantes-background-gradient {
-  --gradient-color-1: #f2709c;
-  --gradient-color-2: #ff9472;
-  --gradient-color-3: #ff9472;
+  --gradient-color-1: #0052D4;
+  --gradient-color-2: #4364F7;
+  --gradient-color-3: #6FB1FC;
 }
 
 body.patrocinadores-background-gradient {
