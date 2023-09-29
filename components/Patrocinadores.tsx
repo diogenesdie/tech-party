@@ -5,7 +5,7 @@ import infiscLogo from '@/public/images/infisc-logo.png';
 import autopecasOkLogo from '@/public/images/autopecas-ok-logo.jpeg';
 import starIcon from '@/public/images/star.png';
 
-const Patrocinadores = forwardRef((props, ref) => {
+const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
     const [title, setTitle] = useState("");
     const [index, setIndex] = useState(0);
     const [hasCallTyping, setHasCallTyping] = useState(false);

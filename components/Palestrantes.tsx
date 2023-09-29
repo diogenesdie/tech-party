@@ -5,7 +5,7 @@ import rafaelPhoto from '@/public/images/rafael-bordini.jpeg';
 import ideaIcon from '@/public/images/idea.png';
 import Image from "next/image";
 
-const Palestrantes = forwardRef((props, ref) => {
+const Palestrantes = forwardRef(function Palestrantes (props, ref) {
     const [title, setTitle] = useState("");
     const [index, setIndex] = useState(0);
     const [hasCallTyping, setHasCallTyping] = useState(false);
