@@ -3,6 +3,7 @@ import { forwardRef, use, useEffect, useImperativeHandle, useState } from "react
 import Image from "next/image";
 import infiscLogo from '@/public/images/infisc-logo.png';
 import autopecasOkLogo from '@/public/images/autopecas-ok-logo.jpeg';
+import tiaCeliaLogo from '@/public/images/tia-celia-logo.jpeg';
 import starIcon from '@/public/images/star.png';
 
 const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
@@ -49,15 +50,20 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
             name: "Autopeças OK",
             theme: "Distribuidora automotiva",
             image: autopecasOkLogo,
+        },
+        {
+            name: "Tia Célia",
+            theme: "Padaria e confeitaria",
+            image: tiaCeliaLogo
         }
     ];
 
     return (
-        <section id="patrocinadores" style={{paddingTop: "100px"}}>
+        <section id="patrocinadores" className="section-padding">
             <div className="flex lg:flex-row flex-col gap-8 items-center">
                 <div className="flex flex-col">
                     <div className="flex items-center">
-                        <h2 className="lg:text-4xl text-2xl text-white font-bold">{title}
+                        <h2 className="lg:text-4xl text-xl text-white font-bold">{title}
                             {!isLastLetter && (
                                 <span className="thin">|</span>
                             )}
@@ -72,21 +78,20 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
                         animationDelay: "1s"
                     }}>
                         <h3 className="section-description text-md">
-                        Agradecemos aos nossos valiosos patrocinadores por tornarem a Tech Party 2023 possível.
-                        Suporte essencial para impulsionar a inovação, essas parcerias destacam o compromisso das empresas líderes em tecnologia 
-                        com o avanço da indústria. Junte-se a nós em reconhecimento a esses parceiros incríveis, cujo apoio é fundamental 
-                        para criar uma experiência enriquecedora e repleta de oportunidades para todos os participantes.
+                            <p>Agradecemos aos nossos <b>valiosos patrocinadores</b> por tornarem a <b>Tech Party 2023</b> possível. Suporte essencial para impulsionar a inovação, essas parcerias destacam o compromisso das empresas líderes em tecnologia com o avanço da indústria. Junte-se a nós em reconhecimento a esses <b>parceiros incríveis</b>, cujo apoio é fundamental para criar uma experiência enriquecedora e repleta de oportunidades para todos os participantes.</p>
                         </h3>
                     </AnimationOnScroll>
                 </div>
                 <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce className="w-full lg:w-auto">
                     <div className="osx-wrapper lg:w-auto w-full mb-4 lg:mb-0">
                         <div className="outer-blur flex	items-center">
-                            <div className="flex items-center justify-start">
-                                <div className="dot red"></div>
-                                <div className="dot amber"></div>
-                                <div className="dot green"></div>
-                                <div className="inner flex items-center justify-center">
+                            <div className="flex items-center justify-start w-full realtive">
+                                <div className="flex items-center justify-start absolute">
+									<div className="dot red"></div>
+									<div className="dot amber"></div>
+									<div className="dot green"></div>
+								</div>
+                                <div className="inner flex items-center justify-center grow">
                                     Patrocinadores
                                 </div>
                             </div>

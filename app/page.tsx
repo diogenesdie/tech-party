@@ -1,24 +1,21 @@
 'use client';
-import Image from 'next/image';
-import { Parallax, Background } from "react-parallax";
-import { useCallback, useEffect, useRef, useState } from 'react';
-import Particles from "react-particles";
-import type { Container, Engine } from "tsparticles-engine";
-import { loadSlim } from "tsparticles-slim";
-import { AnimationOnScroll } from 'react-animation-on-scroll';
-import "animate.css/animate.min.css";
-import Timer from '@/components/Timer';
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import centroEventosImage from '@/public/images/centro-eventos.jpeg';
-import faccatLogo from '@/public/images/faccat-logo.png';
-import tiFaccatLogo from '@/public/images/ti-faccat-logo.png';
+import Local from '@/components/Local';
+import OutrosAnos from '@/components/OutrosAnos';
 import Palestrantes from '@/components/Palestrantes';
 import Patrocinadores from '@/components/Patrocinadores';
+import Timer from '@/components/Timer';
+import centroEventosImage from '@/public/images/centro-eventos.jpeg';
 import cursorIcon from '@/public/images/cursor.png';
 import foto1 from '@/public/images/foto-1.jpeg';
 import foto2 from '@/public/images/foto-2.jpeg';
 import foto3 from '@/public/images/foto-3.jpeg';
 import foto4 from '@/public/images/foto-4.jpeg';
+import tiFaccatLogo from '@/public/images/ti-faccat-logo.png';
+import "animate.css/animate.min.css";
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
 	//typing animation and
@@ -46,6 +43,12 @@ export default function Home() {
 
 	const patrocinadoresRef = useRef<HTMLDivElement>(null);
 	const windowPatrocinadoresRef = useRef<any>(null);
+
+	const localRef = useRef<HTMLDivElement>(null);
+	const windowLocalRef = useRef<any>(null);
+
+	const outrosAnosRef = useRef<HTMLDivElement>(null);
+	const windowOutrosAnosRef = useRef<any>(null);
 
 	useEffect(() => {
 		if (index < text.length) {
@@ -114,14 +117,22 @@ export default function Home() {
 		const handleScroll = () => {
 			const palestrantesRefElement = palestrantesRef.current;
 			const patrocinadoresRefElement = patrocinadoresRef.current;
+			const localRefElement = localRef.current;
+			const outrosAnosRefElement = outrosAnosRef.current;
 			const mainRefElement = mainRef.current;
 
-			if( palestrantesRefElement && patrocinadoresRefElement && mainRefElement ){
+			if( palestrantesRefElement && patrocinadoresRefElement && mainRefElement && localRefElement && outrosAnosRefElement ){
 				const palestrantesRefElementTop = palestrantesRefElement.getBoundingClientRect().top;
 				const palestrantesRefElementBottom = palestrantesRefElement.getBoundingClientRect().bottom;
 
 				const patrocinadoresRefElementTop = patrocinadoresRefElement.getBoundingClientRect().top;
 				const patrocinadoresRefElementBottom = patrocinadoresRefElement.getBoundingClientRect().bottom;
+
+				const localRefElementTop = localRefElement.getBoundingClientRect().top;
+				const localRefElementBottom = localRefElement.getBoundingClientRect().bottom;
+
+				const outrosAnosRefElementTop = outrosAnosRefElement.getBoundingClientRect().top;
+				const outrosAnosRefElementBottom = outrosAnosRefElement.getBoundingClientRect().bottom;
 
 				const mainRefElementTop = mainRefElement.getBoundingClientRect().top;
 				const mainRefElementBottom = mainRefElement.getBoundingClientRect().bottom;
@@ -132,17 +143,39 @@ export default function Home() {
 					windowPalestrantesRef.current?.startTyping();
 					document.body.classList.add("palestrantes-background-gradient");
 					document.body.classList.remove("patrocinadores-background-gradient");
+					document.body.classList.remove("local-background-gradient");
+					document.body.classList.remove("outros-anos-background-gradient");
 				} 
 
 				if( patrocinadoresRefElementTop < windowHeight && patrocinadoresRefElementBottom > windowHeight ){
 					windowPatrocinadoresRef.current?.startTyping();
-					document.body.classList.remove("palestrantes-background-gradient");
 					document.body.classList.add("patrocinadores-background-gradient");
+					document.body.classList.remove("palestrantes-background-gradient");
+					document.body.classList.remove("local-background-gradient");
+					document.body.classList.remove("outros-anos-background-gradient");
+				}
+
+				if( localRefElementTop < windowHeight && localRefElementBottom > windowHeight ){
+					windowLocalRef.current?.startTyping();
+					document.body.classList.add("local-background-gradient");
+					document.body.classList.remove("outros-anos-background-gradient");
+					document.body.classList.remove("palestrantes-background-gradient");
+					document.body.classList.remove("patrocinadores-background-gradient");
+				}
+
+				if( outrosAnosRefElementTop < windowHeight && outrosAnosRefElementBottom > windowHeight ){
+					windowOutrosAnosRef.current?.startTyping();
+					document.body.classList.add("outros-anos-background-gradient");
+					document.body.classList.remove("local-background-gradient");
+					document.body.classList.remove("palestrantes-background-gradient");
+					document.body.classList.remove("patrocinadores-background-gradient");
 				}
 
 				if( mainRefElementTop < windowHeight && mainRefElementBottom > windowHeight ){
 					document.body.classList.remove("palestrantes-background-gradient");
 					document.body.classList.remove("patrocinadores-background-gradient");
+					document.body.classList.remove("local-background-gradient");
+					document.body.classList.remove("outros-anos-background-gradient");
 				}
 			}
 		};
@@ -177,20 +210,27 @@ export default function Home() {
 							maxWidth: "300px"
 						}}>{phrase}
 							{isLastLetter && (
-								<span className={`${isLastLetterPhrase || phraseLetterIndex === 0 ? 'animate-blink' : ''} thin`}>|</span>
+								<span className={`${isLastLetterPhrase || phraseLetterIndex === 0 ? 'animate-blink' : ''}`}>|</span>
 							)}
 						</h2>
 						<div className="wrapper-countdown mt-4 animate__animated animate__fadeInUp animate__delay-1s">
 							<Timer/>
 						</div>
+						<div className="main-description-wrapper flex flex-col items-center justify-center mt-4">
+							<h3 className="section-description text-md text-white text-left animate__animated animate__fadeInUp animate__delay-3s">
+							Explore a vanguarda da <b>inovação na TechParty 2023</b>, um evento <b>gratuito e acessível a todos</b>. Nosso compromisso é impulsionar a <b>Tecnologia da Informação (TI)</b> e fomentar a troca de conhecimento. Desfrute de <b>três noites repletas de talks</b> conduzidas por profissionais qualificados e experientes em suas respectivas áreas. Confira a <b>Programação</b> para conhecer os temas empolgantes e os palestrantes renomados que farão parte desse encontro enriquecedor.
+							</h3>
+						</div>
 					</div>
 					<div className="osx-wrapper lg:w-auto w-full animate__animated animate__fadeInRight animate__delay-2s mb-4 lg:mb-0 gallery-container">
 						<div className="outer-blur flex	items-center">
-							<div className="flex items-center justify-start">
-								<div className="dot red"></div>
-								<div className="dot amber"></div>
-								<div className="dot green"></div>
-								<div className="inner flex items-center justify-center">
+							<div className="flex items-center justify-start w-full relative">
+								<div className="flex items-center justify-start absolute">
+									<div className="dot red"></div>
+									<div className="dot amber"></div>
+									<div className="dot green"></div>
+								</div>
+								<div className="inner flex items-center justify-center grow">
 									TI Faccat 
 								</div>
 							</div>
@@ -312,6 +352,21 @@ export default function Home() {
 			>
 				<Patrocinadores ref={windowPatrocinadoresRef}/>
 			</section>
+			<section 
+				id="local" 
+				className="flex flex-col items-center justify-center w-full px-6 py-10 "
+				ref={localRef}
+			>
+				<Local ref={windowLocalRef}/>
+			</section>
+			<section 
+				id="outrosAnos" 
+				className="flex flex-col items-center justify-center w-full px-6 py-10 "
+				ref={outrosAnosRef}
+			>
+				<OutrosAnos ref={windowOutrosAnosRef}/>
+			</section>
+			<Footer />
 		</>
 	)
 }

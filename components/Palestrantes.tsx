@@ -1,9 +1,11 @@
-import { AnimationOnScroll } from "react-animation-on-scroll";
-import { forwardRef, use, useEffect, useImperativeHandle, useState } from "react";
-import julianaPhoto from '@/public/images/juliana-damasio.jpeg';
-import rafaelPhoto from '@/public/images/rafael-bordini.jpeg';
 import ideaIcon from '@/public/images/idea.png';
+import julianaPhoto from '@/public/images/juliana-damasio.jpeg';
+import marcioRobsonPhoto from '@/public/images/marcio-robson.jpeg';
+import rafaelPhoto from '@/public/images/rafael-bordini.jpeg';
 import Image from "next/image";
+import { forwardRef, useEffect, useImperativeHandle, useState } from "react";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import { FaClock, FaLinkedin } from "react-icons/fa";
 
 const Palestrantes = forwardRef(function Palestrantes (props, ref) {
     const [title, setTitle] = useState("");
@@ -44,25 +46,44 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
             name: "Rafael Bordini",
             theme: "IA na saúde",
             image: rafaelPhoto,
+            day: "9/out",
+            time: "19h",
+            duration: "1h",
+            linkedin: "https://www.linkedin.com/in/rafael-h-bordini-a63187/"
         },
         {
             name: "Juliana Damásio",
             theme: "Usabilidade",
             image: julianaPhoto,
+            day: "10/out",
+            time: "19h",
+            duration: "1h",
+            linkedin: "https://www.linkedin.com/in/juliana-damasio-4916ba39/"
+        },
+        {
+            name: "Márcio Robson de Souza",
+            theme: "Mercado de trabalho em TI",
+            image: marcioRobsonPhoto,
+            day: "11/out",
+            time: "19h",
+            duration: "1h",
+            linkedin: "https://www.linkedin.com/in/marcio-robson-de-souza-4376ba33/"
         }
     ];
 
     return (
-        <section id="palestrantes" style={{paddingTop: "100px"}}>
+        <section id="palestrantes" className="section-padding">
             <div className="flex lg:flex-row gap-8 items-center flex-col-reverse">
                 <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce className="w-full lg:w-auto">
                     <div className="osx-wrapper lg:w-auto w-full mb-4 lg:mb-0">
                         <div className="outer-blur flex	items-center">
-                            <div className="flex items-center justify-start">
-                                <div className="dot red"></div>
-                                <div className="dot amber"></div>
-                                <div className="dot green"></div>
-                                <div className="inner flex items-center justify-center">
+                            <div className="flex items-center justify-start w-full relative">
+                                <div className="flex items-center justify-start absolute">
+									<div className="dot red"></div>
+									<div className="dot amber"></div>
+									<div className="dot green"></div>
+								</div>
+                                <div className="inner flex items-center justify-center grow">
                                     Palestrantes
                                 </div>
                             </div>
@@ -88,11 +109,22 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
                                                     style={{
                                                         borderRadius: "50%",
                                                     }}
+                                                    onMouseEnter={() => {}}
+
                                                 />
+                                                <div className="flex items-center justify-center absolute top-0 left-0 w-full h-full overlay">
+                                                    <a href={palestrante.linkedin} target="_blank" className="text-white text-4xl">
+                                                        <FaLinkedin />
+                                                    </a>
+                                                </div> 
                                             </div>
                                             <div className="flex flex-col items-center">
                                                 <h3 className="text-2xl text-white font-bold p-0 m-0">{palestrante.name}</h3>
                                                 <h4 className="text-whitw p-0 m-0">{palestrante.theme}</h4>
+                                                <div className="flex items-center gap-2">
+                                                    <FaClock />
+                                                    <span>{palestrante.day} às {palestrante.time} ({palestrante.duration})</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </AnimationOnScroll>
@@ -102,7 +134,7 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
                 </AnimationOnScroll>
                 <div className="flex flex-col">
                     <div className="flex items-center">
-                        <h2 className="lg:text-4xl text-2xl text-white font-bold">{title}
+                        <h2 className="lg:text-4xl text-xl text-white font-bold">{title}
                             {!isLastLetter && (
                                 <span className="thin">|</span>
                             )}
@@ -117,9 +149,7 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
                         animationDelay: "1s"
                     }}>
                         <h3 className="section-description text-md">
-                        Conheça os especialistas em informática que vão transformar seu entendimento
-                        sobre o futuro digital. De líderes visionários a profissionais experientes, nossos palestrantes trarão insights inovadores e
-                        conhecimento técnico avançado. Prepare-se para uma experiência única de aprendizado e inspiração.
+                            <p>Conheça os <b>especialistas em informática</b> que vão transformar seu entendimento sobre o <b>futuro digital</b>. De líderes visionários a profissionais experientes, nossos palestrantes trarão <b>insights inovadores</b> e conhecimento técnico avançado. Prepare-se para uma experiência única de <b>aprendizado e inspiração</b>.</p>
                         </h3>
                     </AnimationOnScroll>
                 </div>
