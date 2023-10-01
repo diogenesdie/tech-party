@@ -23,10 +23,10 @@ const Footer = (): JSX.Element => {
             <div className="flex items-center justify-between w-full flex-col md:flex-row px-4">
                 <div className="flex flex-col order-2 md:order-1 mt-4 md:mt-0">
                     <span className="font-semibold md:text-left text-center ">Mais sobre nós</span>
-                    <div className="flex md:flex-col flex-row">
-                        <a href="https://faccat.br" target="_blank" className="text-white text-sm">Faccat</a>
-                        <a href="https://ti.faccat.br/" target="_blank" className="text-white text-sm">Cursos TI Faccat</a>
-                        <a href="https://www.facebook.com/TiFaccat/" target="_blank" className="text-white text-sm">TI Faccat no Facebook</a>
+                    <div className="flex md:flex-col flex-row text-sm">
+                        <span><a href="https://faccat.br" target="_blank" className="text-white text-xs md:text-sm">Faccat</a><span className="md:hidden px-1">|</span></span>
+                        <span><a href="https://ti.faccat.br/" target="_blank" className="text-white text-xs md:text-sm">Cursos TI Faccat</a><span className="md:hidden px-1">|</span></span>
+                        <span><a href="https://www.facebook.com/TiFaccat/" target="_blank" className="text-white text-xs md:text-sm">TI Faccat no Facebook</a></span>
                     </div>
                 </div>
                 <div className="flex flex-col items-center order-1 md:order-2">
