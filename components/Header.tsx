@@ -87,6 +87,9 @@ const Header = () => {
                 </span>
                 <span
                     className="cursor-pointer item-header"
+                    onClick={() => {
+                        window.open('https://faccat.br');
+                    }}
                 >
                     Inscrições
                 </span>

@@ -217,12 +217,12 @@ export default function Home() {
 							<Timer/>
 						</div>
 						<div className="main-description-wrapper flex flex-col items-center justify-center mt-4">
-							<h3 className="section-description text-md text-white text-left animate__animated animate__fadeInUp animate__delay-3s">
+							<h3 className="section-description text-md text-white text-left animate__animated animate__fadeInUp animate__delay-2s">
 							Explore a vanguarda da <b>inovação na TechParty 2023</b>, um evento <b>gratuito e acessível a todos</b>. Nosso compromisso é impulsionar a <b>Tecnologia da Informação (TI)</b> e fomentar a troca de conhecimento. Desfrute de <b>três noites repletas de talks</b> conduzidas por profissionais qualificados e experientes em suas respectivas áreas. Confira a <b>Programação</b> para conhecer os temas empolgantes e os palestrantes renomados que farão parte desse encontro enriquecedor.
 							</h3>
 						</div>
 					</div>
-					<div className="osx-wrapper lg:w-auto w-full animate__animated animate__fadeInRight animate__delay-2s mb-4 lg:mb-0 gallery-container">
+					<div className="osx-wrapper lg:w-auto w-full animate__animated animate__fadeInRight animate__delay-3s mb-4 lg:mb-0 gallery-container">
 						<div className="outer-blur flex	items-center">
 							<div className="flex items-center justify-start w-full relative">
 								<div className="flex items-center justify-start absolute">

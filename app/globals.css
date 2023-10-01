@@ -34,6 +34,10 @@
   initial-value: #00a99d;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   overflow-x: hidden;
@@ -305,5 +309,8 @@ main, section {
     width: 100%;
     height: 300px;
   }
-
+  .image-wrapper {
+    width: 200px;
+    height: 200px;
+  }
 }

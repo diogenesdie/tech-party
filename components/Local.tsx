@@ -56,7 +56,7 @@ const Local = forwardRef(function Local (props, ref) {
                             </div>
                         </div>
                         <div className="osx-content-blur flex flex-col lg:flex-row items-center justify-between w-full gap-8" style={{
-                            padding: "50px",
+                            padding: "50px 20px",
                         }}>
                             <iframe
                                 loading="lazy"

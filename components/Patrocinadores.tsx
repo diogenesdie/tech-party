@@ -12,7 +12,7 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
     const [hasCallTyping, setHasCallTyping] = useState(false);
     const [isLastLetter, setIsLastLetter] = useState(false);
     
-    const text = "Tornaram esse evento possível";
+    const text = "Tornaram o evento possível";
     const speed = 100;
 
     const typeAll = () => {
