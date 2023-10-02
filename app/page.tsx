@@ -199,7 +199,7 @@ export default function Home() {
 				<div className={`flex items-center justify-center w-full flex-col lg:flex-row lg:gap-10 lg:mt-0 mt-8 lg:h-screen`}>
 					<div className="main-title-wrapper flex flex-col h-full items-center p-10 justify-center transition-all duration-500 ease-in-out">
 						<div className="flex items-center">
-							<h1 className="lg:text-6xl text-5xl text-white font-bold">{title}
+							<h1 className="text-5xl text-white font-bold">{title}
 								{phraseLetterIndex === 0 && !isLastLetter && (
 									<span className="thin">|</span>
 								)}
