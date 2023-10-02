@@ -1,20 +1,25 @@
-import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 const Footer = (): JSX.Element => {
     const socialMedias = [
         {
             name: "Facebook",
             link: "https://www.facebook.com/techpartyfaccat/",
-            icon: FaFacebook,
+            icon: FaFacebook
+        },
+        {
+            name: "Instagram",
+            link: "https://www.instagram.com/cursostifaccat",
+            icon: FaInstagram
         },
         {
             name: "Twitter",
             link: "https://twitter.com/techpartyfaccat",
-            icon: FaTwitter,
+            icon: FaTwitter
         },
         {
             name: "Youtube",
             link: "https://www.youtube.com/playlist?list=PLkLwxRNpclbghZcA2PYzLyAbvKR3qZuam",
-            icon: FaYoutube,
+            icon: FaYoutube
         },
     ];
 

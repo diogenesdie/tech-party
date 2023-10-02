@@ -1,4 +1,5 @@
 'use client';
+import Churras from '@/components/Churras';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import Local from '@/components/Local';
@@ -49,6 +50,9 @@ export default function Home() {
 
 	const outrosAnosRef = useRef<HTMLDivElement>(null);
 	const windowOutrosAnosRef = useRef<any>(null);
+
+	const churrasRef = useRef<HTMLDivElement>(null);
+	const windowChurrasRef = useRef<any>(null);
 
 	useEffect(() => {
 		if (index < text.length) {
@@ -119,9 +123,16 @@ export default function Home() {
 			const patrocinadoresRefElement = patrocinadoresRef.current;
 			const localRefElement = localRef.current;
 			const outrosAnosRefElement = outrosAnosRef.current;
+			const churrasRefElement = churrasRef.current;
 			const mainRefElement = mainRef.current;
 
-			if( palestrantesRefElement && patrocinadoresRefElement && mainRefElement && localRefElement && outrosAnosRefElement ){
+			if( palestrantesRefElement && 
+				patrocinadoresRefElement &&
+				mainRefElement && 
+				localRefElement &&
+				outrosAnosRefElement && 
+				churrasRefElement
+			) { 
 				const palestrantesRefElementTop = palestrantesRefElement.getBoundingClientRect().top;
 				const palestrantesRefElementBottom = palestrantesRefElement.getBoundingClientRect().bottom;
 
@@ -134,6 +145,9 @@ export default function Home() {
 				const outrosAnosRefElementTop = outrosAnosRefElement.getBoundingClientRect().top;
 				const outrosAnosRefElementBottom = outrosAnosRefElement.getBoundingClientRect().bottom;
 
+				const churrasRefElementTop = churrasRefElement.getBoundingClientRect().top;
+				const churrasRefElementBottom = churrasRefElement.getBoundingClientRect().bottom;
+
 				const mainRefElementTop = mainRefElement.getBoundingClientRect().top;
 				const mainRefElementBottom = mainRefElement.getBoundingClientRect().bottom;
 				const windowHeight = window.innerHeight - 100;
@@ -145,12 +159,14 @@ export default function Home() {
 					document.body.classList.remove("patrocinadores-background-gradient");
 					document.body.classList.remove("local-background-gradient");
 					document.body.classList.remove("outros-anos-background-gradient");
+					document.body.classList.remove("churras-background-gradient");
 				} 
 
 				if( patrocinadoresRefElementTop < windowHeight && patrocinadoresRefElementBottom > windowHeight ){
 					windowPatrocinadoresRef.current?.startTyping();
 					document.body.classList.add("patrocinadores-background-gradient");
 					document.body.classList.remove("palestrantes-background-gradient");
+					document.body.classList.remove("churras-background-gradient");
 					document.body.classList.remove("local-background-gradient");
 					document.body.classList.remove("outros-anos-background-gradient");
 				}
@@ -159,6 +175,7 @@ export default function Home() {
 					windowLocalRef.current?.startTyping();
 					document.body.classList.add("local-background-gradient");
 					document.body.classList.remove("outros-anos-background-gradient");
+					document.body.classList.remove("churras-background-gradient");
 					document.body.classList.remove("palestrantes-background-gradient");
 					document.body.classList.remove("patrocinadores-background-gradient");
 				}
@@ -166,13 +183,24 @@ export default function Home() {
 				if( outrosAnosRefElementTop < windowHeight && outrosAnosRefElementBottom > windowHeight ){
 					windowOutrosAnosRef.current?.startTyping();
 					document.body.classList.add("outros-anos-background-gradient");
+					document.body.classList.remove("churras-background-gradient");
 					document.body.classList.remove("local-background-gradient");
 					document.body.classList.remove("palestrantes-background-gradient");
 					document.body.classList.remove("patrocinadores-background-gradient");
 				}
 
+				if( churrasRefElementTop < windowHeight && churrasRefElementBottom > windowHeight ){
+					windowChurrasRef.current?.startTyping();
+					document.body.classList.add("churras-background-gradient");
+					document.body.classList.remove("palestrantes-background-gradient");
+					document.body.classList.remove("patrocinadores-background-gradient");
+					document.body.classList.remove("local-background-gradient");
+					document.body.classList.remove("outros-anos-background-gradient");
+				}
+
 				if( mainRefElementTop < windowHeight && mainRefElementBottom > windowHeight ){
 					document.body.classList.remove("palestrantes-background-gradient");
+					document.body.classList.remove("churras-background-gradient");
 					document.body.classList.remove("patrocinadores-background-gradient");
 					document.body.classList.remove("local-background-gradient");
 					document.body.classList.remove("outros-anos-background-gradient");
@@ -358,6 +386,13 @@ export default function Home() {
 				ref={localRef}
 			>
 				<Local ref={windowLocalRef}/>
+			</section>
+			<section 
+				id="churras"
+				className="flex flex-col items-center justify-center w-full px-6 py-10 "
+				ref={churrasRef}
+			>
+				<Churras ref={windowChurrasRef}/>
 			</section>
 			<section 
 				id="outrosAnos" 

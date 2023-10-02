@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Tech Party - TI Faccat',
-  description: 'A Tech Party é um evento de tecnologia que acontece anualmente no Centro de Eventos da Faccat, em Taquara/RS.',
+  description: 'TechParty 2023: Inovação em TI. Evento gratuito pela Faccat em Taquara, RS. Palestras noturnas com especialistas. Confira a programação!',
   authors: [{
     name: 'Diógenes Dietrich',
   }] as Author[],

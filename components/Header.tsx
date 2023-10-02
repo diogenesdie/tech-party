@@ -20,6 +20,10 @@ const Header = () => {
             link: "#local",
         },
         {
+            name: "Churras da TI",
+            link: "#churras",
+        },
+        {
             name: "Outros anos",    
             link: "#outrosAnos",
         },

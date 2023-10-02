@@ -2,9 +2,11 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 import { forwardRef, use, useEffect, useImperativeHandle, useState } from "react";
 import Image from "next/image";
 import infiscLogo from '@/public/images/infisc-logo.png';
+import paranhanaNetLogo from '@/public/images/paranhana-net-logo.png';
 import autopecasOkLogo from '@/public/images/autopecas-ok-logo.jpeg';
 import tiaCeliaLogo from '@/public/images/tia-celia-logo.jpeg';
 import starIcon from '@/public/images/star.png';
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
     const [title, setTitle] = useState("");
@@ -42,19 +44,28 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
 
     const patrocinadores = [
         {
+            name: "Paranhana NET",
+            theme: "Internet de verdade",
+            image: paranhanaNetLogo,
+            link: "https://www.paranhananet.com.br/"
+        },
+        {
             name: "Infisc",
             theme: "Transformação Digital",
             image: infiscLogo,
+            link: "https://www.infisc.com.br/"
         },
         {
             name: "Autopeças OK",
             theme: "Distribuidora automotiva",
             image: autopecasOkLogo,
+            link: "https://www.autopecasok.com.br/"
         },
         {
             name: "Tia Célia",
             theme: "Padaria e confeitaria",
-            image: tiaCeliaLogo
+            image: tiaCeliaLogo,
+            link: "https://www.instagram.com/confeitariatiacelia/"
         }
     ];
 
@@ -118,6 +129,11 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
                                                         borderRadius: "50%",
                                                     }}
                                                 />
+                                                <div className="flex items-center justify-center absolute top-0 left-0 w-full h-full overlay">
+                                                    <a href={patrocinador.link} target="_blank" className="text-white text-4xl">
+                                                        <FaExternalLinkAlt />
+                                                    </a>
+                                                </div> 
                                             </div>
                                             <div className="flex flex-col items-center">
                                                 <h3 className="text-2xl text-white font-bold p-0 m-0">{patrocinador.name}</h3>

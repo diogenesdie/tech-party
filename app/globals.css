@@ -71,6 +71,28 @@ body.outros-anos-background-gradient {
   --gradient-color-3: #4A569D;
 }
 
+body.churras-background-gradient {
+  --gradient-color-1: #df7700;
+  --gradient-color-2: #b56f12;
+  --gradient-color-3: #eeb014;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 100px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 100px;
+  padding: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: #b9b9b9;
+}
+
 /* Animate blink */
 @keyframes blink {
   0% {
@@ -181,6 +203,7 @@ main {
   border-radius: 0px 0px 7px 7px;
   margin-top: -5px;
   padding: 10px;
+  flex-wrap: wrap;
 }
 
 .outer-blur {
@@ -312,5 +335,8 @@ main, section {
   .image-wrapper {
     width: 200px;
     height: 200px;
+  }
+  #outrosAnos {
+    width: 100%;
   }
 }
