@@ -5,8 +5,12 @@ import infiscLogo from '@/public/images/infisc-logo.png';
 import paranhanaNetLogo from '@/public/images/paranhana-net-logo.png';
 import autopecasOkLogo from '@/public/images/autopecas-ok-logo.jpeg';
 import tiaCeliaLogo from '@/public/images/tia-celia-logo.jpeg';
+import panvelLogo from '@/public/images/panvel-logo.webp';
 import starIcon from '@/public/images/star.png';
 import { FaExternalLinkAlt } from "react-icons/fa";
+import goldenCursorIcon from '@/public/images/golden-cursor.png';
+import silverCursorIcon from '@/public/images/silver-cursor.png';
+import cursor3dIcon from '@/public/images/cursor-3d.png';
 
 const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
     const [title, setTitle] = useState("");
@@ -47,27 +51,57 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
             name: "Paranhana NET",
             theme: "Internet de verdade",
             image: paranhanaNetLogo,
-            link: "https://www.paranhananet.com.br/"
+            link: "https://www.paranhananet.com.br/",
+            class: "3d",
+            size: "250px",
+            iconSize: "70px",
+            icon: cursor3dIcon
+        },
+        {
+            name: "Panvel",
+            theme: "Bem você. Você bem.",
+            image: panvelLogo,
+            link: "https://www.panvel.com/",
+            class: "gold",
+            size: "150px",
+            iconSize: "40px",
+            icon: goldenCursorIcon
         },
         {
             name: "Infisc",
             theme: "Transformação Digital",
             image: infiscLogo,
-            link: "https://www.infisc.com.br/"
+            link: "https://www.infisc.com.br/",
+            class: "silver",
+            size: "150px",
+            iconSize: "40px",
+            icon: silverCursorIcon
         },
         {
             name: "Autopeças OK",
             theme: "Distribuidora automotiva",
             image: autopecasOkLogo,
-            link: "https://www.autopecasok.com.br/"
+            link: "https://www.autopecasok.com.br/",
+            class: "silver",
+            size: "150px",
+            iconSize: "40px",
+            icon: silverCursorIcon
         },
-        {
-            name: "Tia Célia",
-            theme: "Padaria e confeitaria",
-            image: tiaCeliaLogo,
-            link: "https://www.instagram.com/confeitariatiacelia/"
-        }
+        // {
+        //     name: "Tia Célia",
+        //     theme: "Padaria e confeitaria",
+        //     image: tiaCeliaLogo,
+        //     link: "https://www.instagram.com/confeitariatiacelia/",
+        //     class: "silver",
+        //     size: "150px"
+        // }
     ];
+
+    const borderColors = {
+        gold: "#FFD700",
+        silver: "#C0C0C0",
+        "3d": "#4AA9EF"
+    }
 
     return (
         <section id="patrocinadores" className="section-padding">
@@ -116,9 +150,11 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
                                     }} >
                                         <div className="flex flex-col items-center justify-between w-full gap-8 mr-3">
                                             <div className="animate__animated animate__fadeInUp animate__delay-3s" style={{
-                                                width: "200px",
-                                                height: "200px",
-                                                position: "relative"
+                                                width: patrocinador.size,
+                                                height: patrocinador.size,
+                                                position: "relative",
+                                                border: `5px solid ${borderColors[patrocinador.class as "gold" | "silver" | "3d"]}`,
+                                                borderRadius: "50%",
                                             }}>
                                                 <Image
                                                     src={patrocinador.image} 
@@ -134,6 +170,19 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
                                                         <FaExternalLinkAlt />
                                                     </a>
                                                 </div> 
+                                                <div className="absolute" style={{
+                                                    left: "50%",
+                                                    transform: "translateX(-50%)",
+                                                    bottom: "-25px",
+                                                }}>
+                                                    <Image
+                                                        src={patrocinador.icon}
+                                                        alt="cursor" 
+                                                        style={{
+                                                            width: patrocinador.iconSize,
+                                                        }}
+                                                    />
+                                                </div>
                                             </div>
                                             <div className="flex flex-col items-center">
                                                 <h3 className="text-2xl text-white font-bold p-0 m-0">{patrocinador.name}</h3>

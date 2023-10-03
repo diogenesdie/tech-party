@@ -43,31 +43,31 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
 
     const palestrantes = [
         {
+            name: "Márcio Robson de Souza",
+            theme: "Mercado de trabalho em TI",
+            image: marcioRobsonPhoto,
+            day: "9/out",
+            time: "19h30m",
+            duration: "1h30m",
+            linkedin: "https://www.linkedin.com/in/marcio-robson-de-souza-4376ba33/"
+        },
+        {
             name: "Rafael Bordini",
             theme: "IA na saúde",
             image: rafaelPhoto,
             day: "9/out",
-            time: "19h",
-            duration: "1h",
+            time: "21h",
+            duration: "1h30m",
             linkedin: "https://www.linkedin.com/in/rafael-h-bordini-a63187/"
         },
         {
             name: "Juliana Damásio",
             theme: "Usabilidade",
             image: julianaPhoto,
-            day: "10/out",
-            time: "19h",
-            duration: "1h",
-            linkedin: "https://www.linkedin.com/in/juliana-damasio-4916ba39/"
-        },
-        {
-            name: "Márcio Robson de Souza",
-            theme: "Mercado de trabalho em TI",
-            image: marcioRobsonPhoto,
             day: "11/out",
-            time: "19h",
-            duration: "1h",
-            linkedin: "https://www.linkedin.com/in/marcio-robson-de-souza-4376ba33/"
+            time: "19h30m",
+            duration: "1h30m",
+            linkedin: "https://www.linkedin.com/in/juliana-damasio-4916ba39/"
         }
     ];
 

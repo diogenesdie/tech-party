@@ -104,7 +104,7 @@ const Churras = forwardRef(function Churras(props, ref) {
                                 <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce style={{
                                     animationDelay: "1.4s"
                                 }}>
-								    <span className="text-white text-2xl font-bold">churrasco-bagual.jpeg</span>
+								    <span className="text-white text-2xl font-bold">Churrasco-Bagual.jpeg</span>
                                 </AnimationOnScroll>
 							</div>
                             <div className="flex flex-col file-wrapper items-center">
@@ -129,7 +129,7 @@ const Churras = forwardRef(function Churras(props, ref) {
                                 <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce style={{
                                     animationDelay: "1.8s"
                                 }}>
-								    <span className="text-white text-2xl font-bold">melhores-assadores.jpeg</span>
+								    <span className="text-white text-2xl font-bold">Com-Os-Melhores-Assadores.jpeg</span>
                                 </AnimationOnScroll>
 							</div>
                             <div className="flex flex-col file-wrapper items-center">
@@ -154,7 +154,7 @@ const Churras = forwardRef(function Churras(props, ref) {
                                 <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce style={{
                                     animationDelay: "2.4s"
                                 }}>
-								    <span className="text-white text-2xl font-bold">ate-chopp.jpeg</span>
+								    <span className="text-white text-2xl font-bold">Chopp-Bem-Gelado.jpeg</span>
                                 </AnimationOnScroll>
 							</div>
                         </div>

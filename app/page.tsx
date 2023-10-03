@@ -9,6 +9,7 @@ import Patrocinadores from '@/components/Patrocinadores';
 import Timer from '@/components/Timer';
 import centroEventosImage from '@/public/images/centro-eventos.jpeg';
 import cursorIcon from '@/public/images/cursor.png';
+import cursor3dIcon from '@/public/images/cursor-3d.png';
 import foto1 from '@/public/images/foto-1.jpeg';
 import foto2 from '@/public/images/foto-2.jpeg';
 import foto3 from '@/public/images/foto-3.jpeg';
@@ -20,7 +21,7 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function Home() {
 	//typing animation and
-	const text = "Tech Party";
+	const text = "TECH PARTY";
 	const phrases = [
 		"No centro de eventos da faccat.",
 		"Do dia 09 ao dia 11 de outubro das 19h30m às 22h30m.",
@@ -62,6 +63,7 @@ export default function Home() {
 
 				if (index == text.length - 1) {
 					setIsLastLetter(true);
+					document.querySelector("body")?.classList.add("dark-main-background");
 				}
 			}, speed);
 		}
@@ -226,13 +228,13 @@ export default function Home() {
 			>
 				<div className={`flex items-center justify-center w-full flex-col lg:flex-row lg:gap-10 lg:mt-0 mt-8 lg:h-screen`}>
 					<div className="main-title-wrapper flex flex-col h-full items-center p-10 justify-center transition-all duration-500 ease-in-out">
-						<div className="flex items-center">
-							<h1 className="text-5xl text-white font-bold">{title}
+						<div className="flex items-center relative">
+							<h1 className={`${isLastLetter ? 'glitch' : ''} text-5xl text-white font-bold`}>{title}
 								{phraseLetterIndex === 0 && !isLastLetter && (
 									<span className="thin">|</span>
 								)}
 							</h1>
-							<Image src={cursorIcon} alt="Cursor" objectFit='contain' width={50} height={50} className="ml-3 animate__animated animate__fadeInUp	 animate__delay-1s icon" />
+							<Image src={isLastLetter ? cursor3dIcon : cursorIcon} alt="Cursor" objectFit='contain' width={50} height={50} className="ml-3 animate__animated animate__fadeInUp	 animate__delay-1s icon" />
 						</div>
 						<h2 className="font-thin text-white font-bold text-center" style={{
 							maxWidth: "300px"
@@ -280,7 +282,7 @@ export default function Home() {
 										}}
 									/>
 								</div>
-								<span style={{animationDelay: "3.6s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">um-evento-ti-faccat.png</span>
+								<span style={{animationDelay: "3.6s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">Um-Evento-TI-Faccat.png</span>
 							</div>
 							<div className="flex flex-col file-wrapper items-center">
 								<div className="image-wrapper animate__animated animate__fadeInUp" style={{
@@ -296,7 +298,7 @@ export default function Home() {
 										}}
 									/>
 								</div>
-								<span style={{animationDelay: "3.8s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">centro-de-eventos.jpg</span>
+								<span style={{animationDelay: "3.8s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">No-Centro-De-Eventos.jpg</span>
 							</div>
 							<div className="flex flex-col file-wrapper items-center">
 								<div className="image-wrapper animate__animated animate__fadeInUp" style={{
@@ -312,7 +314,7 @@ export default function Home() {
 										}}
 									/>
 								</div>
-								<span style={{animationDelay: "4s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">infisc-tech-party-2019.jpeg</span>
+								<span style={{animationDelay: "4s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">No-Auditório-3.jpeg</span>
 							</div>
 							<div className="flex flex-col file-wrapper items-center">
 								<div className="image-wrapper animate__animated animate__fadeInUp animate__animated animate__fadeInUp" style={{
@@ -328,7 +330,7 @@ export default function Home() {
 										}}
 									/>
 								</div>
-								<span style={{animationDelay: "4.2s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">entretenimento.jpeg</span>
+								<span style={{animationDelay: "4.2s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">Entretenimento.jpeg</span>
 							</div>
 							<div className="flex flex-col file-wrapper items-center">
 								<div className="image-wrapper animate__animated animate__fadeInUp" style={{
@@ -344,7 +346,7 @@ export default function Home() {
 										}}
 									/>
 								</div>
-								<span style={{animationDelay: "4.4s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">drones.jpeg</span>
+								<span style={{animationDelay: "4.4s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">Drones.jpeg</span>
 							</div>
 							<div className="flex flex-col file-wrapper items-center">
 								<div className="image-wrapper animate__animated animate__fadeInUp" style={{
@@ -360,7 +362,7 @@ export default function Home() {
 										}}
 									/>
 								</div>
-								<span style={{animationDelay: "4.6s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">e-muito-mais.jpeg</span>
+								<span style={{animationDelay: "4.6s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">E-Muito-Mais.jpeg</span>
 							</div>
 						</div>
 					</div>	
