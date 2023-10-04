@@ -5,6 +5,7 @@ import melhoresAssadoresPhoto from '@/public/images/melhores-assadores.jpeg';
 import Image from "next/image";
 import { forwardRef, useEffect, useImperativeHandle, useState } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { FaMapPin } from 'react-icons/fa';
 ``
 
 const Churras = forwardRef(function Churras(props, ref) {
@@ -61,7 +62,9 @@ const Churras = forwardRef(function Churras(props, ref) {
                         animationDelay: "1s"
                     }}>
                         <h3 className="section-description text-md">
-                            <p>No Churras da TI, parte da Tech Party 2023, no dia <b>11 de outubro</b>, a fusão de <b>sabores, chopp gelado</b> e entretenimento eleva a celebração. As churrasqueiras exalam aromas irresistíveis, transformando cortes de carne em obras-primas, enquanto torneiras de chopp oferecem variedade. O evento, além do paladar, destaca-se por performances ao vivo, música envolvente e atividades interativas, proporcionando uma experiência onde a <b>conexão</b> transcende os códigos, unindo tecnologia e diversão.</p>
+                        <p>No Churras da TI, parte da Tech Party 2023, no dia <b>11 de outubro</b>, a fusão de <b>sabores, chopp gelado</b> e entretenimento eleva a celebração. As churrasqueiras exalam aromas irresistíveis, transformando cortes de carne em obras-primas, enquanto torneiras de chopp oferecem variedade. O evento, além do paladar, destaca-se por performances ao vivo, música envolvente e atividades interativas, proporcionando uma experiência onde a <b>conexão</b> transcende os códigos, unindo tecnologia e diversão.</p>
+                        <p>Participe dessa festa única por apenas <b>R$ 20,00</b>! O pagamento pode ser efetuado na sala <b>B202</b>. Não perca essa oportunidade de saborear delícias, curtir boa música e conectar-se com a comunidade tech!</p>
+                        <p>O evento acontecerá na: <b><a href="https://maps.app.goo.gl/z51KMtrNJ7551biE9" className="flex items-center gap-2"><FaMapPin />Esquina da Rua Dr. Edmundo Saft com a Rua Fridolino Freiberger</a></b></p>
                         </h3>
                     </AnimationOnScroll>
                 </div>
@@ -75,7 +78,7 @@ const Churras = forwardRef(function Churras(props, ref) {
 									<div className="dot green"></div>
 								</div>
                                 <div className="inner flex items-center justify-center grow">
-                                    Churras da TI
+                                    Apenas R$ 20,00
                                 </div>
                             </div>
                         </div>
@@ -104,7 +107,7 @@ const Churras = forwardRef(function Churras(props, ref) {
                                 <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce style={{
                                     animationDelay: "1.4s"
                                 }}>
-								    <span className="text-white text-2xl font-bold">Churrasco-Bagual.jpeg</span>
+								    <span className="text-white text-2xl text-center font-bold">Churrasco-Bagual.jpeg</span>
                                 </AnimationOnScroll>
 							</div>
                             <div className="flex flex-col file-wrapper items-center">
@@ -129,7 +132,7 @@ const Churras = forwardRef(function Churras(props, ref) {
                                 <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce style={{
                                     animationDelay: "1.8s"
                                 }}>
-								    <span className="text-white text-2xl font-bold">Com-Os-Melhores-Assadores.jpeg</span>
+								    <span className="text-white text-2xl text-center font-bold">Melhores-Assadores.jpeg</span>
                                 </AnimationOnScroll>
 							</div>
                             <div className="flex flex-col file-wrapper items-center">
@@ -154,7 +157,7 @@ const Churras = forwardRef(function Churras(props, ref) {
                                 <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce style={{
                                     animationDelay: "2.4s"
                                 }}>
-								    <span className="text-white text-2xl font-bold">Chopp-Bem-Gelado.jpeg</span>
+								    <span className="text-white text-center text-2xl font-bold">Chopp-Bem-Gelado.jpeg</span>
                                 </AnimationOnScroll>
 							</div>
                         </div>

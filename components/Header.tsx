@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaSignInAlt } from "react-icons/fa";
 
 const Header = () => {
     const items = [
@@ -55,7 +55,7 @@ const Header = () => {
                     )
                 })}
                 <button 
-                    className="bg-white" 
+                    className="bg-white flex items-center gap-2 zoom" 
                         style={{
                         borderRadius: '200px',
                         boxShadow: '1px 1px 5px 1px rgba(0,0,0,0.1)',
@@ -63,14 +63,21 @@ const Header = () => {
                         padding: '5px 10px',
                     }}
                     onClick={() => {
-                        window.open('https://faccat.br');
+                        window.open('https://saga2.faccat.br/index.php?op=1068&chave=2974&portal=E');
                     }}
                 >
-                    Inscrições
+                    PARTICIPAR <FaSignInAlt />
                 </button>
             </div>
-            <div className="mobile w-full background-white text-black fixed bottom-0 flex items-center justify-between z-10 md:hidden">
-                <span 
+            <div className="mobile background-white text-black fixed flex z-10 md:hidden" style={{
+                bottom: '20px',
+                right: '5px',
+                margin: '0 20px',
+                boxShadow: '1px 1px 5px 1px #ffffff80',
+                borderRadius: '10px',
+                color: '#08185f',
+            }}>
+                {/* <span 
                     className="arrow-up"
                     onClick={() => {
                         let newCurrentIndex = currentIndex - 1;
@@ -88,16 +95,16 @@ const Header = () => {
                     }}
                 >
                     <FaChevronUp />
-                </span>
-                <span
-                    className="cursor-pointer item-header"
+                </span> */}
+                <div
+                    className="cursor-pointer item-header text-center flex items-center gap-2"
                     onClick={() => {
-                        window.open('https://faccat.br');
+                        window.open('https://saga2.faccat.br/index.php?op=1068&chave=2974&portal=E');
                     }}
                 >
-                    Inscrições
-                </span>
-                <span 
+                    PARTICIPAR <FaSignInAlt />
+                </div>
+                {/* <span 
                     className="arrow-down" 
                     onClick={() => {
                         let newCurrentIndex = currentIndex + 1;
@@ -115,7 +122,7 @@ const Header = () => {
                     }}
                 >
                     <FaChevronDown />
-                </span>
+                </span> */}
             </div>
         </header>
     );

@@ -14,6 +14,9 @@ import foto1 from '@/public/images/foto-1.jpeg';
 import foto2 from '@/public/images/foto-2.jpeg';
 import foto3 from '@/public/images/foto-3.jpeg';
 import foto4 from '@/public/images/foto-4.jpeg';
+import brindes from '@/public/images/brindes.jpeg';
+import rango1 from '@/public/images/rango-1.jpeg';
+import rango2 from '@/public/images/rango-2.jpeg';
 import tiFaccatLogo from '@/public/images/ti-faccat-logo.png';
 import "animate.css/animate.min.css";
 import Image from 'next/image';
@@ -63,7 +66,6 @@ export default function Home() {
 
 				if (index == text.length - 1) {
 					setIsLastLetter(true);
-					document.querySelector("body")?.classList.add("dark-main-background");
 				}
 			}, speed);
 		}
@@ -229,12 +231,11 @@ export default function Home() {
 				<div className={`flex items-center justify-center w-full flex-col lg:flex-row lg:gap-10 lg:mt-0 mt-8 lg:h-screen`}>
 					<div className="main-title-wrapper flex flex-col h-full items-center p-10 justify-center transition-all duration-500 ease-in-out">
 						<div className="flex items-center relative">
-							<h1 className={`${isLastLetter ? 'glitch' : ''} text-5xl text-white font-bold`}>{title}
-								{phraseLetterIndex === 0 && !isLastLetter && (
-									<span className="thin">|</span>
-								)}
-							</h1>
-							<Image src={isLastLetter ? cursor3dIcon : cursorIcon} alt="Cursor" objectFit='contain' width={50} height={50} className="ml-3 animate__animated animate__fadeInUp	 animate__delay-1s icon" />
+							<h1 className={`glitch text-4xl lg:text-5xl text-white font-bold`}>{title}</h1>
+							{phraseLetterIndex === 0 && !isLastLetter && (
+								<span className="thin text-4xl">|</span>
+							)}
+							<Image src={cursor3dIcon} alt="Cursor" objectFit='contain' width={50} height={50} className="ml-3 animate__animated animate__fadeInUp	 animate__delay-1s icon" />
 						</div>
 						<h2 className="font-thin text-white font-bold text-center" style={{
 							maxWidth: "300px"
@@ -338,7 +339,7 @@ export default function Home() {
 								}}>
 									<Image 
 										src={foto3}
-										alt="Drones" 
+										alt="Networking"
 										layout="fill"
 										objectFit="cover"
 										style={{
@@ -346,11 +347,63 @@ export default function Home() {
 										}}
 									/>
 								</div>
-								<span style={{animationDelay: "4.4s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">Drones.jpeg</span>
+								<span style={{animationDelay: "4.4s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">Networking.jpeg</span>
 							</div>
+							
 							<div className="flex flex-col file-wrapper items-center">
 								<div className="image-wrapper animate__animated animate__fadeInUp" style={{
 									animationDelay: "4.2s"
+								}}>
+									<Image 
+										src={brindes}
+										alt="Brindes" 
+										layout="fill"
+										objectFit="cover"
+										style={{
+											borderRadius: "10px",
+										}}
+									/>
+								</div>
+								<span style={{animationDelay: "4.6s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">Brindes.jpeg</span>
+							</div>
+
+							<div className="flex flex-col file-wrapper items-center">
+								<div className="image-wrapper animate__animated animate__fadeInUp" style={{
+									animationDelay: "4.4s"
+								}}>
+									<Image 
+										src={rango1}
+										alt="Brindes" 
+										layout="fill"
+										objectFit="cover"
+										style={{
+											borderRadius: "10px",
+										}}
+									/>
+								</div>
+								<span style={{animationDelay: "4.8s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">Rango-Break.jpeg</span>
+							</div>
+
+							<div className="flex flex-col file-wrapper items-center">
+								<div className="image-wrapper animate__animated animate__fadeInUp" style={{
+									animationDelay: "4.6s"
+								}}>
+									<Image 
+										src={rango2}
+										alt="Brindes" 
+										layout="fill"
+										objectFit="cover"
+										style={{
+											borderRadius: "10px",
+										}}
+									/>
+								</div>
+								<span style={{animationDelay: "5s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">Mais-Rango-Break.jpeg</span>
+							</div>
+
+							<div className="flex flex-col file-wrapper items-center">
+								<div className="image-wrapper animate__animated animate__fadeInUp" style={{
+									animationDelay: "4.8s"
 								}}>
 									<Image 
 										src={foto4}
@@ -362,7 +415,7 @@ export default function Home() {
 										}}
 									/>
 								</div>
-								<span style={{animationDelay: "4.6s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">E-Muito-Mais.jpeg</span>
+								<span style={{animationDelay: "5.2s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">E-Muito-Mais.jpeg</span>
 							</div>
 						</div>
 					</div>	

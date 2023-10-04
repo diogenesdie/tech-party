@@ -1,6 +1,8 @@
 import ideaIcon from '@/public/images/idea.png';
 import julianaPhoto from '@/public/images/juliana-damasio.jpeg';
 import marcioRobsonPhoto from '@/public/images/marcio-robson.jpeg';
+import douglasDiasPhoto from '@/public/images/douglas-dias.jpeg';
+import jhonesSouzaPhoto from '@/public/images/jhones-souza.jpeg';
 import rafaelPhoto from '@/public/images/rafael-bordini.jpeg';
 import Image from "next/image";
 import { forwardRef, useEffect, useImperativeHandle, useState } from "react";
@@ -43,21 +45,39 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
 
     const palestrantes = [
         {
+            name: "Douglas Dias",
+            theme: "Cybersegurança",
+            image: douglasDiasPhoto,
+            day: "09/out",
+            time: "19h30m",
+            duration: "40 min",
+            linkedin: "https://www.linkedin.com/in/douglas-dias-00100011/"
+        },
+        {
+            name: "Jhones Souza",
+            theme: "Métodos Ágeis e Inovação",
+            image: jhonesSouzaPhoto,
+            day: "09/out",
+            time: "20h30m",
+            duration: "40 min",
+            linkedin: "https://www.linkedin.com/in/jhonesdesouza1981/"
+        },
+        {
             name: "Márcio Robson de Souza",
             theme: "Mercado de trabalho em TI",
             image: marcioRobsonPhoto,
-            day: "9/out",
+            day: "10/out",
             time: "19h30m",
-            duration: "1h30m",
+            duration: "40 min",
             linkedin: "https://www.linkedin.com/in/marcio-robson-de-souza-4376ba33/"
         },
         {
             name: "Rafael Bordini",
             theme: "IA na saúde",
             image: rafaelPhoto,
-            day: "9/out",
-            time: "21h",
-            duration: "1h30m",
+            day: "10/out",
+            time: "20h30m",
+            duration: "40 min",
             linkedin: "https://www.linkedin.com/in/rafael-h-bordini-a63187/"
         },
         {
@@ -66,7 +86,7 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
             image: julianaPhoto,
             day: "11/out",
             time: "19h30m",
-            duration: "1h30m",
+            duration: "40 min",
             linkedin: "https://www.linkedin.com/in/juliana-damasio-4916ba39/"
         }
     ];
@@ -88,8 +108,9 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
                                 </div>
                             </div>
                         </div>
-                        <div className="osx-content-blur flex flex-col lg:flex-row items-center justify-between w-full gap-8" style={{
+                        <div className="osx-content-blur flex flex-col lg:flex-row items-center justify-center w-full gap-8" style={{
                             padding: "50px",
+                            maxWidth: "1000px",
                         }}>
                             {palestrantes.map((palestrante, index) => (
                                     <AnimationOnScroll key={index} animateIn="animate__fadeInUp" animateOnce style={{
@@ -119,9 +140,9 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
                                                 </div> 
                                             </div>
                                             <div className="flex flex-col items-center">
-                                                <h3 className="text-2xl text-white font-bold p-0 m-0">{palestrante.name}</h3>
+                                                <h3 className="text-2xl text-center text-white font-bold p-0 m-0">{palestrante.name}</h3>
                                                 <h4 className="text-whitw p-0 m-0">{palestrante.theme}</h4>
-                                                <div className="flex items-center gap-2">
+                                                <div className="flex items-center gap-2 lg:text-md text-sm">
                                                     <FaClock />
                                                     <span>{palestrante.day} às {palestrante.time} ({palestrante.duration})</span>
                                                 </div>

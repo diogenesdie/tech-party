@@ -2,14 +2,14 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 import { forwardRef, use, useEffect, useImperativeHandle, useState } from "react";
 import Image from "next/image";
 import infiscLogo from '@/public/images/infisc-logo.png';
-import paranhanaNetLogo from '@/public/images/paranhana-net-logo.png';
+import paranhanaNetLogo from '@/public/images/paranhana-net-logo.jpg';
 import autopecasOkLogo from '@/public/images/autopecas-ok-logo.jpeg';
-import tiaCeliaLogo from '@/public/images/tia-celia-logo.jpeg';
 import panvelLogo from '@/public/images/panvel-logo.webp';
 import starIcon from '@/public/images/star.png';
 import { FaExternalLinkAlt } from "react-icons/fa";
 import goldenCursorIcon from '@/public/images/golden-cursor.png';
 import silverCursorIcon from '@/public/images/silver-cursor.png';
+import cooperCursorIcon from '@/public/images/cooper-cursor.png';
 import cursor3dIcon from '@/public/images/cursor-3d.png';
 
 const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
@@ -52,7 +52,7 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
             theme: "Internet de verdade",
             image: paranhanaNetLogo,
             link: "https://www.paranhananet.com.br/",
-            class: "3d",
+            class: "class3d",
             size: "250px",
             iconSize: "70px",
             icon: cursor3dIcon
@@ -75,7 +75,7 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
             class: "silver",
             size: "150px",
             iconSize: "40px",
-            icon: silverCursorIcon
+            icon: cooperCursorIcon
         },
         {
             name: "Autopeças OK",
@@ -85,7 +85,7 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
             class: "silver",
             size: "150px",
             iconSize: "40px",
-            icon: silverCursorIcon
+            icon: cooperCursorIcon
         },
         // {
         //     name: "Tia Célia",
@@ -99,8 +99,9 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
 
     const borderColors = {
         gold: "#FFD700",
-        silver: "#C0C0C0",
-        "3d": "#4AA9EF"
+        silver: "#B87333",
+        coopper: "#B87333",
+        "class3d": "#4AA9EF"
     }
 
     return (
@@ -149,11 +150,9 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
                                         animationDelay: `${index * .3}s`
                                     }} >
                                         <div className="flex flex-col items-center justify-between w-full gap-8 mr-3">
-                                            <div className="animate__animated animate__fadeInUp animate__delay-3s" style={{
-                                                width: patrocinador.size,
-                                                height: patrocinador.size,
+                                            <div className={`animate__animated animate__fadeInUp animate__delay-3s patrocinador-image ${patrocinador.class}`} style={{
                                                 position: "relative",
-                                                border: `5px solid ${borderColors[patrocinador.class as "gold" | "silver" | "3d"]}`,
+                                                border: `5px solid ${borderColors[patrocinador.class as "gold" | "silver" | "class3d"]}`,
                                                 borderRadius: "50%",
                                             }}>
                                                 <Image
