@@ -17,7 +17,7 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
     const [index, setIndex] = useState(0);
     const [hasCallTyping, setHasCallTyping] = useState(false);
     const [isLastLetter, setIsLastLetter] = useState(false);
-    
+
     const text = "Tornaram o evento possível";
     const speed = 100;
 
@@ -126,6 +126,13 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
                         <h3 className="section-description text-md">
                             <p>Agradecemos aos nossos <b>valiosos patrocinadores</b> por tornarem a <b>Tech Party 2023</b> possível. Suporte essencial para impulsionar a inovação, essas parcerias destacam o compromisso das empresas líderes em tecnologia com o avanço da indústria. Junte-se a nós em reconhecimento a esses <b>parceiros incríveis</b>, cujo apoio é fundamental para criar uma experiência enriquecedora e repleta de oportunidades para todos os participantes.</p>
                         </h3>
+                    </AnimationOnScroll>
+                    <AnimationOnScroll animateIn="animate__fadeInUp" className="flex justify-center" animateOnce style={{
+                        animationDelay: "2s"
+                    }}>
+                        <a href={`/2023/downloads/como-patrocinar-tech-party.pdf`} target="_blank" className="text-white text-2xl text-center w-full btn-patrocinador mt-3 zoom" download>
+                            QUERO SER UM PATROCINADOR
+                        </a>
                     </AnimationOnScroll>
                 </div>
                 <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce className="w-full lg:w-auto">

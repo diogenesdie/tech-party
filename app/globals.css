@@ -112,9 +112,6 @@ body::-webkit-scrollbar-thumb {
   font-weight: 300;
 }
 
-main {
-}
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -163,11 +160,16 @@ main {
 
 .dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background: #f9f9f9;
   border-radius: 50%;
   margin: 0 4px 0 0;
+}
+
+.dot:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .dot.red {
@@ -199,6 +201,11 @@ main {
   margin-top: -5px;
   padding: 10px;
   flex-wrap: wrap;
+}
+
+.osx-content-blur.opaco-dark {
+  background: linear-gradient(180deg, rgba(39, 49, 55) 0%, rgba(39, 49, 55) 100%);
+  border-radius: 0px 0px 7px 7px;
 }
 
 .outer-blur {
@@ -244,8 +251,19 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 250px;
-  height: 150px;
+  width: 240px;
+  height: 115px;
+}
+
+@media (max-width: 1400px) {
+  .image-wrapper {
+    width: 110px;
+    height: 100px;
+  }
+
+  .file-wrapper span {
+    font-size: 10px !important;
+  }
 }
 
 .image-wrapper img {
@@ -323,6 +341,51 @@ main, section {
   height: 150px;
 }
 
+.btn-patrocinador {
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.btn-patrocinador:hover {
+  background: #fff;
+  color: #0ABFBC;
+}
+
+.btn-palestrante:hover {
+  background: #fff;
+  color: #6682F8;
+}
+
+.btn-palestrante {
+  border: 2px solid #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  width: 200px;
+}
+
+.dialog-description {
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dialog-description .osx-content-blur .description {
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.dialog-description .osx-content-blur {
+  max-height: 70vh;
+}
+
+.dialog-description.active {
+  transform: translateX(-50%) scale(1);
+}
+
 @media (max-width: 768px) {
   main, section {
     min-height: auto;
@@ -363,6 +426,10 @@ main, section {
   .patrocinador-image.silver {
     width: 130px;
     height: 130px;
+  }
+
+  .dialog-description {
+    width: 92%;
   }
   
 }
