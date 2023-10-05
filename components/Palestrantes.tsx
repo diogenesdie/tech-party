@@ -91,12 +91,13 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
         },
         {
             name: "Márcio Robson de Souza",
-            theme: "Mercado de trabalho em TI",
+            theme: "Mercado Brasileiro de TI: panorama, tendências e oportunidades",
             image: marcioRobsonPhoto,
             day: "10/out",
             time: "19h30m",
             duration: "40 min",
-            linkedin: "https://www.linkedin.com/in/marcio-robson-de-souza-4376ba33/"
+            linkedin: "https://www.linkedin.com/in/marcio-robson-de-souza-4376ba33/",
+            description: `<p><p><b>Marcio Robson de Souza</b>, 44 anos, é Bacharel em Administração de empresas pela Faccat (2010) e Técnico em Contabilidade pelo CNEC (1997). Ele é Sócio Fundador, CEO e diretor comercial da iBRsistemas Software ERP, Sócio Fundador, CEO e diretor comercial da ParanhanaNET, e Sócio fundador da Plano1 Contabilidade. Com 27 anos de experiência em TI, Marcio é um empreendedor dedicado.</p><p style="margin-top: 10px"><b>Mercado Brasileiro de TI: panorama, tendências e oportunidades</b></p><p>Uma profunda análise dos números do mercado de TI, avaliando os investimentos do setor no Brasil e no mundo, para juntos criar os cenários e identificar onde estão as oportunidades.</p></p>`
         },
         {
             name: "Rafael Bordini",
@@ -139,15 +140,17 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
                                 </div>
                             </div>
                         </div>
-                        <div className="osx-content-blur flex flex-col lg:flex-row items-center justify-center w-full gap-8" style={{
+                        <div className="osx-content-blur flex flex-col lg:flex-row items-center lg:items-start justify-center w-full gap-8" style={{
                             padding: "50px",
-                            maxWidth: "1000px",
+                            maxWidth: "1100px",
                         }}>
                             {palestrantes.map((palestrante, index) => (
-                                    <AnimationOnScroll key={index} animateIn="animate__fadeInUp" animateOnce style={{
+                                    <AnimationOnScroll key={index} animateIn="animate__fadeInUp" className="flex flex-col items-center" animateOnce style={{
                                         animationDelay: `${index * .3}s`
                                     }} >
-                                        <div className="flex flex-col items-center justify-between w-full gap-2 mr-3">
+                                        <div className="flex flex-col items-center justify-between w-full gap-2 mr-3" style={{
+                                            maxWidth: "280px",
+                                        }}>
                                             <div className="animate__animated animate__fadeInUp animate__delay-3s" style={{
                                                 width: "180px",
                                                 height: "180px",
@@ -178,7 +181,7 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
                                             </div>
                                             {palestrante.description && (
                                                 <button 
-                                                    className="text-white text-2xl text-center w-full btn-palestrante mt-3 zoom"
+                                                    className="text-white text-2xl text-center w-full btn-palestrante mt-3 zoom justify-end grow"
                                                     onClick={() => {
                                                         setDescription(palestrante.description || "");
 
@@ -238,7 +241,7 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
                                 <div className="dot green"></div>
                             </div>
                             <div className="inner flex items-center justify-center grow">
-                                Palestrantes
+                                Descrição
                             </div>
                         </div>
                     </div>

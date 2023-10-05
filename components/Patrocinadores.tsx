@@ -130,7 +130,7 @@ const Patrocinadores = forwardRef(function Patrocinadores(props, ref) {
                     <AnimationOnScroll animateIn="animate__fadeInUp" className="flex justify-center" animateOnce style={{
                         animationDelay: "2s"
                     }}>
-                        <a href={`/2023/downloads/como-patrocinar-tech-party.pdf`} target="_blank" className="text-white text-2xl text-center w-full btn-patrocinador mt-3 zoom" download>
+                        <a href={`/2023/downloads/como-patrocinar-tech-party.pdf`} target="_blank" className="text-white text-xl lg:text-2xl text-center w-full btn-patrocinador mt-3 zoom" download>
                             QUERO SER UM PATROCINADOR
                         </a>
                     </AnimationOnScroll>

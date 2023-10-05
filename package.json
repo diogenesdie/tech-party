@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "build-static": "next build && npm run build-static-repair-index",
-    "build-static-repair-index": "replace-in-files --string \"/_next/static\" --replacement \"./_next/static\" --path \"./out/index.html\" && replace-in-files --string \"/_next/static\" --replacement \"./_next/static\" --path \"./out/404.html\""
+    "lint": "next lint"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
