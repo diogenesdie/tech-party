@@ -5,7 +5,7 @@ import melhoresAssadoresPhoto from '@/public/images/melhores-assadores.jpeg';
 import Image from "next/image";
 import { forwardRef, useEffect, useImperativeHandle, useState } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import { FaMapPin } from 'react-icons/fa';
+import { FaMapMarked } from 'react-icons/fa';
 ``
 
 const Churras = forwardRef(function Churras(props, ref) {
@@ -62,9 +62,16 @@ const Churras = forwardRef(function Churras(props, ref) {
                         animationDelay: "1s"
                     }}>
                         <h3 className="section-description text-md">
-                        <p>No Churras da TI, parte da Tech Party 2023, no dia <b>11 de outubro</b>, a fusão de <b>sabores, chopp gelado</b> e entretenimento eleva a celebração. As churrasqueiras exalam aromas irresistíveis, transformando cortes de carne em obras-primas, enquanto torneiras de chopp oferecem variedade. O evento, além do paladar, destaca-se por performances ao vivo, música envolvente e atividades interativas, proporcionando uma experiência onde a <b>conexão</b> transcende os códigos, unindo tecnologia e diversão.</p>
+                        <p>No Churras da TI, parte da Tech Party 2023, no dia <b>11 de outubro a partir das 20h30m</b>, a fusão de <b>sabores, chopp gelado</b> e entretenimento eleva a celebração. As churrasqueiras exalam aromas irresistíveis, transformando cortes de carne em obras-primas, enquanto torneiras de chopp oferecem variedade. O evento, além do paladar, destaca-se por performances ao vivo, música envolvente e atividades interativas, proporcionando uma experiência onde a <b>conexão</b> transcende os códigos, unindo tecnologia e diversão.</p>
                         <p>Participe dessa festa única por apenas <b>R$ 20,00</b>! O pagamento pode ser efetuado na sala <b>B202</b>. Não perca essa oportunidade de saborear delícias, curtir boa música e conectar-se com a comunidade tech!</p>
-                        <p>O evento acontecerá na: <b><a href="https://maps.app.goo.gl/z51KMtrNJ7551biE9" className="flex items-center gap-2"><FaMapPin />Esquina da Rua Dr. Edmundo Saft com a Rua Fridolino Freiberger</a></b></p>
+                        <b><a href="https://maps.app.goo.gl/z51KMtrNJ7551biE9" target="_blank" className="flex justify-center items-center text-sm gap-2 zoom" style={{
+                            padding: "10px 5px",
+                            background: "#fff",
+                            borderRadius: "50px",
+                            textAlign: "center",
+                            color: "#BB7510",
+                            marginTop: "10px",
+                        }}><FaMapMarked className="text-3xl"/>Esquina da Rua Dr. Edmundo Saft com a Rua Fridolino Freiberger</a></b>
                         </h3>
                     </AnimationOnScroll>
                 </div>
@@ -89,7 +96,7 @@ const Churras = forwardRef(function Churras(props, ref) {
                                 <AnimationOnScroll animateIn="animate__fadeInUp relative" animateOnce style={{
                                     animationDelay: "1s"
                                 }}>
-                                    <div className="animate__animated animate__fadeInUp animate__delay-3s image-wrapper" style={{
+                                    <div className="animate__animated animate__fadeInUp animate__delay-3s image-wrapper churras" style={{
                                         position: "relative"
                                     }}>
                                         <Image 
@@ -114,7 +121,7 @@ const Churras = forwardRef(function Churras(props, ref) {
                                 <AnimationOnScroll animateIn="animate__fadeInUp relative" animateOnce style={{
                                     animationDelay: "1.4s"
                                 }}>
-                                    <div className="animate__animated animate__fadeInUp animate__delay-3s image-wrapper" style={{
+                                    <div className="animate__animated animate__fadeInUp animate__delay-3s image-wrapper churras" style={{
                                         position: "relative"
                                     }}>
                                         <Image 
@@ -139,7 +146,7 @@ const Churras = forwardRef(function Churras(props, ref) {
                                 <AnimationOnScroll animateIn="animate__fadeInUp relative" animateOnce style={{
                                     animationDelay: "2s"
                                 }}>
-                                    <div className="animate__animated animate__fadeInUp animate__delay-3s image-wrapper" style={{
+                                    <div className="animate__animated animate__fadeInUp animate__delay-3s image-wrapper churras" style={{
                                         position: "relative"
                                     }}>
                                         <Image 

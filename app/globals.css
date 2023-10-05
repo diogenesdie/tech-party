@@ -255,6 +255,11 @@ body::-webkit-scrollbar-thumb {
   height: 115px;
 }
 
+.image-wrapper.churras {
+  width: 250px;
+  height: 200px;
+}
+
 @media (max-width: 1400px) {
   .image-wrapper {
     width: 110px;
