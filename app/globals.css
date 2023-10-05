@@ -260,17 +260,6 @@ body::-webkit-scrollbar-thumb {
   height: 200px;
 }
 
-@media (max-width: 1400px) {
-  .image-wrapper {
-    width: 110px;
-    height: 100px;
-  }
-
-  .file-wrapper span {
-    font-size: 10px !important;
-  }
-}
-
 .image-wrapper img {
   border-radius: 20px;
   width: 200px;
@@ -391,6 +380,10 @@ main, section {
   transform: translateX(-50%) scale(1);
 }
 
+.palestrantes-wrapper {
+  max-width: 280px;
+}
+
 @media (max-width: 768px) {
   main, section {
     min-height: auto;
@@ -437,6 +430,26 @@ main, section {
     width: 92%;
   }
   
+}
+
+@media (max-width: 1480px) {
+  .image-wrapper {
+    width: 110px;
+    height: 100px;
+  }
+
+  .file-wrapper span {
+    font-size: 10px !important;
+  }
+
+  .palestrantes-wrapper {
+    max-width: 200px;
+  }
+
+  .image-wrapper.churras {
+    width: 200px;
+    height: 180px;
+  }
 }
 
 .glitch-container {

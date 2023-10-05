@@ -148,9 +148,7 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
                                     <AnimationOnScroll key={index} animateIn="animate__fadeInUp" className="flex flex-col items-center" animateOnce style={{
                                         animationDelay: `${index * .3}s`
                                     }} >
-                                        <div className="flex flex-col items-center justify-between w-full gap-2 mr-3" style={{
-                                            maxWidth: "280px",
-                                        }}>
+                                        <div className="palestrantes-wrapper flex flex-col items-center justify-between w-full gap-2 mr-3">
                                             <div className="animate__animated animate__fadeInUp animate__delay-3s" style={{
                                                 width: "180px",
                                                 height: "180px",
