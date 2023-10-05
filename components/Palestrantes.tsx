@@ -86,7 +86,8 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
             day: "09/out",
             time: "20h30m",
             duration: "40 min",
-            linkedin: "https://www.linkedin.com/in/jhonesdesouza1981/"
+            linkedin: "https://www.linkedin.com/in/jhonesdesouza1981/",
+            description: `<p><p><b>Jhones Souza</b> possui mais de 20 anos de experiência em análise e desenvolvimento de sistemas, metodologias ágeis e gestão de pessoas. Atua como Desenvolvedor de Sistemas, Scrum Master, e Agile Coach, com ênfase em Scrum, Kanban, e Scrumban. Além disso, é integrante ao time Core Global de Coaches, Design Thinking Coach, e Embaixador do Labs. Também lidera o Employee Sounding Board e é Analista de Sistemas, especialista em sistemas como HCM, Master Data, Payroll e Reports. Jhones é Mentor, Coach, Trainer e Recrutador, com formação em Tecnologia em Análise e Desenvolvimento de Sistemas pela Unitins e MBA em Gestão de Recursos Humanos pela Unisinos.</p><p style="margin-top: 10px"><b>Métodos Ágeis e Inovação</b></p><p>Apresentação inspiradora sobre gestão ágil, agilidade, inovação e carreira. Descubra como aplicar práticas ágeis para impulsionar sua carreira e alcançar resultados inovadores. Uma palestra imperdível para quem busca se destacar no mercado atual.</p></p>`
         },
         {
             name: "Márcio Robson de Souza",
@@ -146,10 +147,10 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
                                     <AnimationOnScroll key={index} animateIn="animate__fadeInUp" animateOnce style={{
                                         animationDelay: `${index * .3}s`
                                     }} >
-                                        <div className="flex flex-col items-center justify-between w-full gap-8 mr-3">
+                                        <div className="flex flex-col items-center justify-between w-full gap-2 mr-3">
                                             <div className="animate__animated animate__fadeInUp animate__delay-3s" style={{
-                                                width: "200px",
-                                                height: "200px",
+                                                width: "180px",
+                                                height: "180px",
                                                 position: "relative"
                                             }}>
                                                 <Image 
@@ -160,8 +161,6 @@ const Palestrantes = forwardRef(function Palestrantes (props, ref) {
                                                     style={{
                                                         borderRadius: "50%",
                                                     }}
-                                                    onMouseEnter={() => {}}
-
                                                 />
                                                 <div className="flex items-center justify-center absolute top-0 left-0 w-full h-full overlay">
                                                     <a href={palestrante.linkedin} target="_blank" className="text-white text-4xl">
