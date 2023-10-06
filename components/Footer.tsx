@@ -1,5 +1,7 @@
 import { FaFacebook, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import tiaCeliaLogo from '@/public/images/tia-celia-logo.jpeg';
+import lighthouseLogo from '@/public/images/lighthouse-logo.jpeg';
+import mercadoArnholdLogo from '@/public/images/mercado-arnhold-logo.png';
 import Image from "next/image";
 
 const Footer = (): JSX.Element => {
@@ -32,7 +34,18 @@ const Footer = (): JSX.Element => {
             theme: "Padaria e confeitaria",
             image: tiaCeliaLogo,
             link: "https://www.instagram.com/confeitariatiacelia/",
-        }
+        },
+        {
+            name: "Lighthouse",
+            theme: "Consultoria e desenvolvimento de software",
+            image: lighthouseLogo,
+            link: "https://www.linkedin.com/company/lighthouse-ti/",
+        },
+        {
+            name: "Mercado Arnhold",
+            theme: "Supermercado",
+            image: mercadoArnholdLogo
+        },
     ]
 
     return (

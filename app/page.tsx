@@ -247,9 +247,15 @@ export default function Home() {
 						<div className="wrapper-countdown mt-4 animate__animated animate__fadeInUp animate__delay-1s">
 							<Timer/>
 						</div>
+						<a href="https://saga2.faccat.br/index.php?op=1068&chave=2974&portal=E" target="_blank" className={`flex justify-center participacao-gratuita mt-4 zoom animation`} onMouseEnter={(e) => {
+							//remove class animation
+							e.currentTarget.classList.remove("animation");
+						}}>
+							PARTICIPAÇÃO GRATUITA
+						</a>
 						<div className="main-description-wrapper flex flex-col items-center justify-center mt-4">
 							<h3 className="section-description text-md text-white text-left animate__animated animate__fadeInUp animate__delay-2s">
-							Explore a vanguarda da <b>inovação na TechParty 2023</b>, um evento <b>gratuito e acessível a todos</b>. Nosso compromisso é impulsionar a <b>Tecnologia da Informação (TI)</b> e fomentar a troca de conhecimento. Desfrute de <b>três noites repletas de talks</b> conduzidas por profissionais qualificados e experientes em suas respectivas áreas. Confira a <b>Programação</b> para conhecer os temas empolgantes e os palestrantes renomados que farão parte desse encontro enriquecedor.
+							<b>Traga sua família e amigos</b>, venha explorar a vanguarda da <b>inovação na TechParty 2023</b>, um evento <b>gratuito e acessível a todos</b>. Nosso compromisso é impulsionar a <b>Tecnologia da Informação (TI)</b> e fomentar a troca de conhecimento. Desfrute de <b>três noites repletas de talks</b> conduzidas por profissionais qualificados e experientes em suas respectivas áreas. Confira a <b>Programação</b> para conhecer os temas empolgantes e os palestrantes renomados que farão parte desse encontro enriquecedor.
 							</h3>
 						</div>
 					</div>
