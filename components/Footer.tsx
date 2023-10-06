@@ -106,7 +106,7 @@ const Footer = (): JSX.Element => {
                         ))}
                     </div>
                 </div>
-                <div className="flex developer flex-col order-4 md:mt-0 mt-4 pb-12 md:pb-0 md:text-sm text-xs">
+                <div className="flex developer flex-col order-4 md:mt-0 mt-4 pb-16 md:pb-0 md:text-sm text-xs">
                     <span className="font-thin">
                         Feito com ❤️ por
                         <a href="https://github.com/diogenesdie" target="_blank" className="text-white"> Diógenes Dietrich</a>
