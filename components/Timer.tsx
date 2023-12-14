@@ -49,7 +49,7 @@ const Timer = () => {
         return (
             <p className={`glitch text-center text-2xl 2xl:text-2xl text-white font-bold animate__animated animate__fadeInUp ${animationDelay}`} style={{
                 animationIterationCount: '1'
-            }}>{'O evento já começou'}</p>
+            }}>{'Participou do evento?'}</p>
         )
     }
 

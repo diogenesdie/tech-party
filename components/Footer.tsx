@@ -60,7 +60,7 @@ const Footer = (): JSX.Element => {
                     </div>
                 </div>
                 <div className="flex flex-col items-center order-1 md:order-2">
-                    <span className="text-white text-center font-semibold   ">Siga nos</span>
+                    <span className="text-white text-center font-semibold   ">Siga-nos</span>
                     <div className="flex items-center gap-4 mt-3">
                         {socialMedias.map((socialMedia, index) => (
                             <a

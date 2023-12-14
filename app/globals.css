@@ -33,7 +33,12 @@ body {
   background: linear-gradient(-45deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3));
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  transition: --gradient-color-1 0.5s ease, --gradient-color-2 0.5s ease, --gradient-color-3 0.5s ease;
+  transition: --gradient-color-1 0.5s ease, --gradient-color-2 0.5s ease, --gradient-color-3 0.5s ease;  
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #4263F6;
+  --sb-size: 10px;
+  scrollbar-color: var(--sb-thumb-color) 
+                   var(--sb-track-color);
 }
 
 body.dark-main-background {
@@ -73,20 +78,19 @@ body.churras-background-gradient {
 }
 
 body::-webkit-scrollbar {
-  width: 10px;
-  border-radius: 100px;
+  width: var(--sb-size) 
 }
 
 body::-webkit-scrollbar-track {
-  background-color: #fff;
-  border-radius: 100px;
-  padding: 10px;
+  background: var(--sb-track-color);
+  border-radius: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
-  border-radius: 100px;
-  background: #b9b9b9;
-}
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+  
+  }
 
 /* Animate blink */
 @keyframes blink {
@@ -355,9 +359,8 @@ main, section {
 .btn-palestrante {
   border: 2px solid #fff;
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 15px;
   transition: all 0.5s ease;
-  width: 200px;
 }
 
 .dialog-description {

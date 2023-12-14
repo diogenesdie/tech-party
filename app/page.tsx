@@ -247,11 +247,11 @@ export default function Home() {
 						<div className="wrapper-countdown mt-4 animate__animated animate__fadeInUp animate__delay-1s">
 							<Timer/>
 						</div>
-						<a href="https://saga2.faccat.br/index.php?op=1068&chave=2974&portal=E" target="_blank" className={`flex justify-center participacao-gratuita mt-4 zoom animation`} onMouseEnter={(e) => {
+						<a href="https://saga2.faccat.br/index.php?op=1374&certificados=t" target="_blank" className={`flex justify-center participacao-gratuita mt-4 zoom animation`} onMouseEnter={(e) => {
 							//remove class animation
 							e.currentTarget.classList.remove("animation");
 						}}>
-							PARTICIPAÇÃO GRATUITA
+							BAIXAR CERTIFICADO
 						</a>
 						<div className="main-description-wrapper flex flex-col items-center justify-center mt-4">
 							<h3 className="section-description text-md text-white text-left animate__animated animate__fadeInUp animate__delay-2s">
@@ -329,7 +329,7 @@ export default function Home() {
 								}}>
 									<Image 
 										src={foto2}
-										alt="Entretenimento" 
+										alt="Luta de robôs" 
 										layout="fill"
 										objectFit="cover"
 										style={{
@@ -337,7 +337,7 @@ export default function Home() {
 										}}
 									/>
 								</div>
-								<span style={{animationDelay: "4.2s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">Entretenimento.jpeg</span>
+								<span style={{animationDelay: "4.2s"}} className="text-white text-2xl font-bold animate__animated animate__fadeInUp">Luta-De-Robôs.jpeg</span>
 							</div>
 							<div className="flex flex-col file-wrapper items-center">
 								<div className="image-wrapper animate__animated animate__fadeInUp" style={{

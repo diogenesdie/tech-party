@@ -63,10 +63,10 @@ const Header = () => {
                         padding: '5px 10px',
                     }}
                     onClick={() => {
-                        window.open('https://saga2.faccat.br/index.php?op=1068&chave=2974&portal=E');
+                        window.open('https://saga2.faccat.br/index.php?op=1374&certificados=t');
                     }}
                 >
-                    PARTICIPAR <FaSignInAlt />
+                    BAIXAR CERTIFICADO <FaSignInAlt />
                 </button>
             </div>
             <div className="mobile background-white text-black fixed flex z-10 md:hidden" style={{
@@ -77,52 +77,14 @@ const Header = () => {
                 borderRadius: '10px',
                 color: '#08185f',
             }}>
-                {/* <span 
-                    className="arrow-up"
-                    onClick={() => {
-                        let newCurrentIndex = currentIndex - 1;
-
-                        if( newCurrentIndex < 0 ){
-                            newCurrentIndex = items.length - 1;
-                        }
-
-                        setCurrentIndex(newCurrentIndex);
-
-                        const element = document.querySelector(items[newCurrentIndex].link);
-                        if( element ){
-                            element.scrollIntoView({behavior: "smooth"});
-                        }
-                    }}
-                >
-                    <FaChevronUp />
-                </span> */}
                 <div
                     className="cursor-pointer item-header text-center flex items-center gap-2"
                     onClick={() => {
-                        window.open('https://saga2.faccat.br/index.php?op=1068&chave=2974&portal=E');
+                        window.open('https://saga2.faccat.br/index.php?op=1374&certificados=t');
                     }}
                 >
-                    PARTICIPAR <FaSignInAlt />
+                    BAIXAR CERTIFICADO <FaSignInAlt />
                 </div>
-                {/* <span 
-                    className="arrow-down" 
-                    onClick={() => {
-                        let newCurrentIndex = currentIndex + 1;
-
-                        if( newCurrentIndex > items.length - 1 ){
-                            newCurrentIndex = 0;
-                        }
-
-                        setCurrentIndex(newCurrentIndex);
-
-                        const element = document.querySelector(items[newCurrentIndex].link);
-                        if( element ){
-                            element.scrollIntoView({behavior: "smooth"});
-                        }
-                    }}
-                >
-                    <FaChevronDown />
-                </span> */}
             </div>
         </header>
     );
