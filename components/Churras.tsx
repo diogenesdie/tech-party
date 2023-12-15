@@ -1,6 +1,7 @@
 import choppsPhoto from '@/public/images/ate-chopp.jpeg';
 import barbecueIcon from '@/public/images/barbecue.png';
 import churrasTiPhoto from '@/public/images/churras-ti.jpeg';
+import espetos from '@/public/images/espetos-picanha.jpeg';
 import melhoresAssadoresPhoto from '@/public/images/melhores-assadores.jpeg';
 import Image from "next/image";
 import { forwardRef, useEffect, useImperativeHandle, useState } from "react";
@@ -100,7 +101,7 @@ const Churras = forwardRef(function Churras(props, ref) {
                                         position: "relative"
                                     }}>
                                         <Image 
-                                            src={churrasTiPhoto}
+                                            src={espetos}
                                             alt="Centro de Eventos" 
                                             layout="fill"
                                             objectFit="cover"
